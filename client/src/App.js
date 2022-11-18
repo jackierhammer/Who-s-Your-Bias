@@ -1,0 +1,1 @@
+// this file is for creating apollo client and app function
