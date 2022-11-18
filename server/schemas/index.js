@@ -1,1 +1,6 @@
-// resolvers and typeDefs will be imported to and exported from here
+// imports resolvers and typeDefs
+const typeDefs = require('./typeDefs');
+const resolvers = require('./resolvers');
+
+// exports resolvers and typeDefs
+module.exports = { typeDefs, resolvers };
