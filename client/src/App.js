@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // added apollo client import
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import SearchBooks from './pages/SearchBooks';
-import SavedBooks from './pages/SavedBooks';
+import Biases from './pages/Biases';
+import Explore from './pages/Explore';
+import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 
 // here we make a new apollo client
