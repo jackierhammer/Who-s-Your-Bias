@@ -13,7 +13,7 @@ const { ApolloServer } = require('apollo-server-express');
 
 // auth helper will need to be created
 // imports authMiddleware from auth
-// const { authMiddleware } = require('./utils/auth');
+const { authMiddleware } = require('./utils/auth');
 
 const app = express();
 // opens local host on port 3001
@@ -24,7 +24,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
 //   uncomment when auth is created
-//   context: authMiddleware
+  context: authMiddleware
 });
 // since we are using an Apollo Server 2 version before 3, we don't have to use server.start() first
 server.applyMiddleware({ app });
