@@ -23,7 +23,6 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-//   uncomment when auth is created
   context: authMiddleware
 });
 // since we are using an Apollo Server 2 version before 3, we don't have to use server.start() first

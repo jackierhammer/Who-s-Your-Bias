@@ -1,1 +1,4 @@
-// models will be imported to and exported from here
+const User = require('./User');
+const Group = require('./Group');
+
+module.exports = { User, Group };
