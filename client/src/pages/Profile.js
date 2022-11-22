@@ -9,8 +9,6 @@ import {useMutation, useQuery} from '@apollo/react-hooks';
 const Profile = () => {
   const { loading, data} = useQuery(GET_ME);
   const userData = data?.me || [];
-
-  
   
   return (
     <>

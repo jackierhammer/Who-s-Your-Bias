@@ -1,5 +1,6 @@
 * {
-    color:black
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -10,12 +11,16 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    margin: 10px;
 }
 
 a {
@@ -29,4 +34,17 @@ a:hover {
 .small {
     font-weight: 300;
     font-style: italic;
+}
+
+.idol {
+    color: #000;
+    background-color: rgb(223, 90, 130);
+    border-style: none;
+    padding: auto;
+    margin: 10px;
+}
+
+.idol:hover {
+    color: #000;
+    background-color: bisque;
 }
