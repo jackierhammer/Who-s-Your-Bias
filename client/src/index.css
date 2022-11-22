@@ -1,5 +1,12 @@
+* {
+    color:black
+}
+
 body {
+    background-color: bisque;
     font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    padding: 15px;
 }
 
 h1,
@@ -9,6 +16,14 @@ h4,
 h5,
 h6 {
     font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: rgb(223, 90, 130);
 }
 
 .small {

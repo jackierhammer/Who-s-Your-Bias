@@ -8,11 +8,7 @@ import {useMutation} from '@apollo/react-hooks';
 const Biases = () => {
   return (
     <>
-      <Jumbotron fluid className='text-light bg-dark'>
-        <Container>
-          <h1>Biases</h1>
-        </Container>
-      </Jumbotron>
+          <h1>Choose Your Biases</h1>
     </>
   );
 };

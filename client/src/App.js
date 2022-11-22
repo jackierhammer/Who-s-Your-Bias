@@ -6,6 +6,8 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import Biases from './pages/Biases';
 import Explore from './pages/Explore';
 import Profile from './pages/Profile';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
 
 // here we make a new apollo client
@@ -32,6 +34,8 @@ function App() {
                         <Route exact path='/' element={<Explore />} />
                         <Route exact path='/biases' element={<Biases />} />
                         <Route exact path='/profile' element={<Profile />} />
+                        <Route exact path='/login' element={<Login />} />
+                        <Route exact path='/signup' element={<Signup />} />
                         <Route render={() => <h1 className='display-2'>Wrong Page</h1>} />
                     </Routes>
                 </>

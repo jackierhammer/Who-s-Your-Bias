@@ -8,11 +8,7 @@ import {useMutation} from '@apollo/react-hooks';
 const Explore = () => {
   return (
     <>
-      <Jumbotron fluid className='text-light bg-dark'>
-        <Container>
           <h1>Explore</h1>
-        </Container>
-      </Jumbotron>
     </>
   );
 };
