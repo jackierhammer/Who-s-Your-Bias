@@ -20,10 +20,8 @@ This repository contains the code for a kpop themed social network site. Kpop fa
 No installation is necessary to use the application
 
 ## Usage
-    
-Images and deployed app link coming soon!
 
-[Deployed Application]()
+[Deployed Application](https://peaceful-fortress-40131.herokuapp.com/)
 
 ## Contributing
 
