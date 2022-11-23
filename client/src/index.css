@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: bisque;
+    background-color: rgb(255, 196, 232);
     font-family: 'Courier New', Courier, monospace;
     color: #000000;
     padding: 15px;
@@ -46,5 +46,5 @@ a:hover {
 
 .idol:hover {
     color: #000;
-    background-color: bisque;
+    background-color: rgb(255, 196, 232);
 }
