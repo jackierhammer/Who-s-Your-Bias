@@ -3,17 +3,37 @@ import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'reac
 
 import Auth from '../utils/auth';
 // imports useMutation function
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation, useQuery, gql } from '@apollo/client';
+import { GET_ME } from '../utils/queries';
 
 import groupData from '../data/groupData';
+import { ADD_BIAS } from '../utils/mutations';
 
 const Biases = () => {
+  const {loading, data} = useQuery(GET_ME);
+  
+  const userData = data?.me || [];
+  const [addBias, { error }] = useMutation(ADD_BIAS, {
+    refetchQueries: [
+      {query: GET_ME}
+    ]
+  });
+
   if (!Auth.loggedIn()) {
     return (
       <>
         <h1>Log in to choose your biases!</h1>
       </>
     )
+  }
+
+  const handleSaveBias = async (group, idol) => {
+    console.log(group,idol);
+    addBias({variables: {
+      "groupName": group,
+      "idol": idol
+    }});
+    console.log(userData);
   }
 
   return (
@@ -28,7 +48,7 @@ const Biases = () => {
                   <Card.Title>{group.groupName}</Card.Title>
                   {group.activeMembers.map((member) => {
                     return (
-                      <Button key={member} className='btn idol' onClick={() => console.log("you clicked the " + group.groupName + " button")}>
+                      <Button key={member} className='btn idol' onClick={() => handleSaveBias(group.groupName, member)}>
                         {member}
                       </Button>
                     )

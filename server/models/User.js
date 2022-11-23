@@ -26,7 +26,8 @@ const userSchema = new Schema(
         // needs improvement
         biases: [
             {
-                type: String,
+                groupName: String,
+                idol: String
             }
         ],
         

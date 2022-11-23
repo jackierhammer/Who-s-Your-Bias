@@ -1,12 +1,15 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 export const GET_ME = gql`
-    {
+    query {
         me {
             _id
             username
             email
-            biases
+           biases {
+            groupName
+            idol
+           }
         }
     }
 `;

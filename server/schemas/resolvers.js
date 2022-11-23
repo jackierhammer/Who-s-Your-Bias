@@ -9,8 +9,9 @@ const resolvers = {
     Query: {
         // gets single user data 
         me: async (parent, args, context) => {
+            console.log(context.user);
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user_id })
+                const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
                 return userData;
             }
@@ -27,6 +28,17 @@ const resolvers = {
             const token = signToken(user);
             // returns user and token
             return { token, user };
+        },
+        addBias: async (parent, args, context) => {
+            // updates user using arguments
+            const user = await User.findOneAndUpdate(
+                {_id: context.user._id},
+                {$addToSet: {
+                    biases: {groupName: args.groupName, idol: args.idol}
+                }},
+                {new: true}
+            );
+            return user;
         },
 
         // login, sign token, and send back

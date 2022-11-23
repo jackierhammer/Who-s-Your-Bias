@@ -24,3 +24,14 @@ export const ADD_USER = gql`
         }
     }
 `;
+
+export const ADD_BIAS = gql`
+mutation AddBias($groupName: String!, $idol: String!) {
+    addBias(groupName: $groupName, idol: $idol) {
+      biases {
+        groupName
+        idol
+      }
+    }
+  }
+`;
