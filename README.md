@@ -21,6 +21,8 @@ No installation is necessary to use the application
 
 ## Usage
 
+![biasapp](https://user-images.githubusercontent.com/106570933/203646090-1fc514fa-8a44-4beb-bf4a-64d6b96f91a3.png)
+
 [Deployed Application](https://peaceful-fortress-40131.herokuapp.com/)
 
 ## Contributing
