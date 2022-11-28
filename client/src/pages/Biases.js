@@ -28,12 +28,10 @@ const Biases = () => {
   }
 
   const handleSaveBias = async (group, idol) => {
-    console.log(group,idol);
     addBias({variables: {
       "groupName": group,
       "idol": idol
     }});
-    console.log(userData);
   }
 
   return (

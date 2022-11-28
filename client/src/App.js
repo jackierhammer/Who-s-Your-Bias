@@ -9,7 +9,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import Biases from './pages/Biases';
-import Explore from './pages/Explore';
+import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -46,7 +46,7 @@ function App() {
                 <>
                     <Navbar />
                     <Routes>
-                        <Route exact path='/' element={<Explore />} />
+                        <Route exact path='/' element={<Home />} />
                         <Route exact path='/biases' element={<Biases />} />
                         <Route exact path='/profile' element={<Profile />} />
                         <Route exact path='/login' element={<Login />} />

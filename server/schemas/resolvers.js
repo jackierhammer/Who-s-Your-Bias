@@ -9,7 +9,6 @@ const resolvers = {
     Query: {
         // gets single user data 
         me: async (parent, args, context) => {
-            console.log(context.user);
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
@@ -39,6 +38,18 @@ const resolvers = {
                 {new: true}
             );
             return user;
+        },
+        removeBias: async (parent, args, context) => {
+            // updates user using arguments
+            if (context.user) {
+                // removes the selected book from the user's saved books
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { biases: { groupName: args.groupName, idol: args.idol } } },
+                    { new: true }
+                );
+                return updatedUser;
+            }
         },
 
         // login, sign token, and send back

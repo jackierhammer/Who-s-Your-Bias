@@ -35,3 +35,14 @@ mutation AddBias($groupName: String!, $idol: String!) {
     }
   }
 `;
+
+export const REMOVE_BIAS = gql`
+mutation RemoveBias($groupName: String!, $idol: String!) {
+    removeBias(groupName: $groupName, idol: $idol) {
+      biases {
+        groupName
+        idol
+      }
+    }
+  }
+`;

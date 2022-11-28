@@ -31,6 +31,19 @@ a:hover {
     color: rgb(223, 90, 130);
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.bias-card {
+    border-style: inset;
+    border-color: rgb(223, 90, 130);
+    margin: auto;
+    padding: 10px;
+    width: 45vw;
+}
+
 .small {
     font-weight: 300;
     font-style: italic;
@@ -47,4 +60,15 @@ a:hover {
 .idol:hover {
     color: #000;
     background-color: rgb(255, 196, 232);
+}
+
+/* adjustment for smaller screens */
+@media screen and (max-width: 768px) {
+    .cards {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .bias-card {
+        width: 90vw;
+    }
 }

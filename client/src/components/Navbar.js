@@ -15,7 +15,7 @@ const AppNavbar = () => {
           <h2>Who's Your Bias?</h2>
           <Navbar>
               <Nav.Link as={Link} to='/'>
-                Explore
+                Home
               </Nav.Link>
               {Auth.loggedIn() ? (
                 <>
