@@ -10,12 +10,12 @@ import groupData from '../data/groupData';
 import { ADD_BIAS } from '../utils/mutations';
 
 const Biases = () => {
-  const {loading, data} = useQuery(GET_ME);
-  
+  const { loading, data } = useQuery(GET_ME);
+
   const userData = data?.me || [];
   const [addBias, { error }] = useMutation(ADD_BIAS, {
     refetchQueries: [
-      {query: GET_ME}
+      { query: GET_ME }
     ]
   });
 
@@ -28,35 +28,34 @@ const Biases = () => {
   }
 
   const handleSaveBias = async (group, idol) => {
-    addBias({variables: {
-      "groupName": group,
-      "idol": idol
-    }});
+    addBias({
+      variables: {
+        "groupName": group,
+        "idol": idol
+      }
+    });
   }
 
   return (
     <>
       <h1>Choose Your Biases</h1>
-      <Container>
-        <CardColumns>
-          {groupData.map((group) => {
-            return (
-              <Card key={group.groupName} border='dark'>
-                <Card.Body>
-                  <Card.Title>{group.groupName}</Card.Title>
-                  {group.activeMembers.map((member) => {
-                    return (
-                      <Button key={member} className='btn idol' onClick={() => handleSaveBias(group.groupName, member)}>
-                        {member}
-                      </Button>
-                    )
-                  })}
-                </Card.Body>
-              </Card>
-            );
-          })}
-        </CardColumns>
-      </Container>
+      <div class="cards">
+        {groupData.map((group) => {
+          return (
+            <div class='bias-card'>
+              <h2>{group.groupName}</h2>
+              {group.activeMembers.map((member) => {
+                return (
+                  <Button key={member} className='btn idol' onClick={() => handleSaveBias(group.groupName, member)}>
+                    {member}
+                  </Button>
+                )
+              })}
+            </div>
+          );
+        })}
+      </div>
+
     </>
   )
 };

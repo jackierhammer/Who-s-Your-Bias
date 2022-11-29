@@ -39,9 +39,10 @@ a:hover {
 .bias-card {
     border-style: inset;
     border-color: rgb(223, 90, 130);
-    margin: auto;
+    margin: 10px;
     padding: 10px;
     width: 45vw;
+    background-color: white;
 }
 
 .small {
@@ -49,7 +50,7 @@ a:hover {
     font-style: italic;
 }
 
-.idol {
+.idol, .remove {
     color: #000;
     background-color: rgb(223, 90, 130);
     border-style: none;
@@ -57,7 +58,7 @@ a:hover {
     margin: 10px;
 }
 
-.idol:hover {
+.idol:hover, .remove:hover {
     color: #000;
     background-color: rgb(255, 196, 232);
 }
