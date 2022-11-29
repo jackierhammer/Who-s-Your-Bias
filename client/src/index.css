@@ -1,5 +1,5 @@
 * {
-    color:black;
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -50,7 +50,8 @@ a:hover {
     font-style: italic;
 }
 
-.idol, .remove {
+.idol,
+.remove {
     color: #000;
     background-color: rgb(223, 90, 130);
     border-style: none;
@@ -58,7 +59,8 @@ a:hover {
     margin: 10px;
 }
 
-.idol:hover, .remove:hover {
+.idol:hover,
+.remove:hover {
     color: #000;
     background-color: rgb(255, 196, 232);
 }
@@ -69,6 +71,7 @@ a:hover {
         display: grid;
         grid-template-columns: auto;
     }
+
     .bias-card {
         width: 90vw;
     }

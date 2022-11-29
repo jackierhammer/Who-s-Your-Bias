@@ -30,7 +30,7 @@ const userSchema = new Schema(
                 idol: String
             }
         ],
-        
+
     },
     // set this to use virtual below
     {

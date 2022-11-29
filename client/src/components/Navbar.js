@@ -12,27 +12,27 @@ const AppNavbar = () => {
 
   return (
     <>
-          <h2>Who's Your Bias?</h2>
-          <Navbar>
-              <Nav.Link as={Link} to='/'>
-                Home
-              </Nav.Link>
-              {Auth.loggedIn() ? (
-                <>
-                  <Nav.Link as={Link} to='/biases'>
-                    Choose Your Biases
-                  </Nav.Link>
-                  <Nav.Link as={Link} to='/profile'>
-                    See Your Profile
-                  </Nav.Link>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-                </>
-              ) : (
-                <>
-                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
-                <Nav.Link as={Link} to='/signup'>Sign Up</Nav.Link>
-                </>
-              )}
+      <h2>Who's Your Bias?</h2>
+      <Navbar>
+        <Nav.Link as={Link} to='/'>
+          Home
+        </Nav.Link>
+        {Auth.loggedIn() ? (
+          <>
+            <Nav.Link as={Link} to='/biases'>
+              Choose Your Biases
+            </Nav.Link>
+            <Nav.Link as={Link} to='/profile'>
+              See Your Profile
+            </Nav.Link>
+            <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+          </>
+        ) : (
+          <>
+            <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+            <Nav.Link as={Link} to='/signup'>Sign Up</Nav.Link>
+          </>
+        )}
       </Navbar>
     </>
   );

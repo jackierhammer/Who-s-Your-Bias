@@ -31,11 +31,13 @@ const resolvers = {
         addBias: async (parent, args, context) => {
             // updates user using arguments
             const user = await User.findOneAndUpdate(
-                {_id: context.user._id},
-                {$addToSet: {
-                    biases: {groupName: args.groupName, idol: args.idol}
-                }},
-                {new: true}
+                { _id: context.user._id },
+                {
+                    $addToSet: {
+                        biases: { groupName: args.groupName, idol: args.idol }
+                    }
+                },
+                { new: true }
             );
             return user;
         },
